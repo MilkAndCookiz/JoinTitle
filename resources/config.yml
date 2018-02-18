@@ -1,0 +1,15 @@
+#################
+#JoinTitle
+#By CookieCode
+#Version: 1.0.0
+#A title plugin for your server, configurable & functional.
+#################
+
+#main_title: Change the big title here
+main_title: "§l§9Cygma§r"
+
+#down_title: change the little title here
+down_title: "§6§ki§9i§ai§r §7§o#Welcome Back !§r §a§ki§9i§6i§r"
+
+#time_title: Change the appearance time of the title here. 20 = 1 sec.
+time_title: 60
