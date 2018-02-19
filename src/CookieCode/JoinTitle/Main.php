@@ -26,7 +26,7 @@ private $prefix = "[JoinTitle]";
 		$this->getServer()->getLogger()->info(TF::GREEN . $this->prefix . TF::YELLOW . " Plugin disabled by CookieCode");
 	}
 	
-	public function onCo(PlayerJoinEvent $event){ //Je savais pas comment nomé la fonction donc j'ai mis onCo lol.
+	public function onJoin(PlayerJoinEvent $event){
 		$joinTask = new SendTask($this, $event->getPlayer());
 		$this->getServer()->getScheduler()->scheduleDelayedTask($joinTask, 20);
 	}
