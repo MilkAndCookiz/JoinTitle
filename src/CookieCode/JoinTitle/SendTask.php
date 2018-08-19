@@ -1,24 +1,34 @@
 <?php
 
-namespace CookieCode\JoinTitle;
+ /**
+ *  _____   ______   ______   _  _   _   ______
+ * |  _ _| |  __  | |  __  | | |/ / |_| |  ____|
+ * | |     | |  | | | |  | | |   /   _  | |___
+ * | |     | |  | | | |  | | |  (   | | |  ___|
+ * | |_ _  | |__| | | |__| | |   \  | | | |____
+ * |_____| |______| |______| |_|\_\ |_| |______|
+ *
+ * Coded by MilkAndCookiz.
+ *
+**/
 
+namespace MilkAndCookiz\JoinTitle;
+
+#External
 use pocketmine\{Player, Server};
-use pocketmine\scheduler\PluginTask;
+use pocketmine\scheduler\Task;
 use pocketmine\event\Listener;
+#Internal
+use MilkAndCookiz\JoinTitle\Main;
 
-use CookieCode\JoinTitle\Main;
-
-//Developped by CookieCode.
-
-class SendTask extends PluginTask implements Listener{
+class SendTask extends Task implements Listener{
 
 	public function __construct(Main $main, Player $player){
-		parent::__construct($main);
 		$this->main = $main;
 		$this->player = $player;
 	}
 
 	public function onRun($currentTick){
-		$this->player->addTitle($this->main->getConfig()->get("main_title"), $this->main->getConfig()->get("down_title"), "20", $this->main->getConfig()->get("time_title"), "40");
+		$this->player->addTitle($this->main->getConfig()->get("main_title"), $this->main->getConfig()->get("down_title"), 20, $this->main->getConfig()->get("time_title"), 40);
 	}
 } 
